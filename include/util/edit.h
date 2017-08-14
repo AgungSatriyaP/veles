@@ -81,11 +81,6 @@ class EditEngine {
                                     size_t size) const;
 
   void initAddressMapping();
-
-  QMap<size_t, data::BinData>::const_iterator itFromPos(size_t pos) const;
-  QMap<size_t, data::BinData> changesFromRange(size_t pos, size_t size) const;
-  void applyChangesOnBinData(data::BinData* data, size_t offset = 0,
-                             int64_t max_bytes = -1) const;
 };
 
 }  // namespace util
