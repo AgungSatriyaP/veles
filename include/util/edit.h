@@ -79,6 +79,8 @@ class EditEngine {
 
   data::BinData getDataFromEditNode(const EditNode& edit_node, size_t offset,
                                     size_t size) const;
+  void trySquashWithPrev(QMap<size_t, EditNode>::iterator it);
+  void trySquash(QMap<size_t, EditNode>::iterator it);
 
   void initAddressMapping();
 };
